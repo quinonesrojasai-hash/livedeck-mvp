@@ -10,7 +10,7 @@ export default function Home() {
     microphone: false,
   });
 
-  const handleStartStream = async () => {
+  const handleStartStream = () => {
     setShowModal(true);
   };
 
@@ -110,10 +110,9 @@ export default function Home() {
                 borderRadius: '6px',
                 cursor: 'pointer',
                 fontWeight: 'bold',
-                transition: 'background-color 0.3s',
+                transition: 'background-color 0.3s ease',
               }}
-              onMouseOver={(e) => (e.target.style.backgroundColor = '#6d28d9')}
-              onMouseOut={(e) => (e.target.style.backgroundColor = '#7c3aed')}
+              className="btn-hover"
             >
               Iniciar Transmisión
             </button>
@@ -216,7 +215,9 @@ export default function Home() {
                 borderRadius: '6px',
                 cursor: 'pointer',
                 fontWeight: 'bold',
+                transition: 'background-color 0.3s ease',
               }}
+              className="btn-hover-red"
             >
               Detener Transmisión
             </button>
@@ -265,7 +266,9 @@ export default function Home() {
                   borderRadius: '6px',
                   cursor: 'pointer',
                   fontWeight: 'bold',
+                  transition: 'background-color 0.3s ease',
                 }}
+                className="btn-hover-gray"
               >
                 Cancelar
               </button>
@@ -279,7 +282,9 @@ export default function Home() {
                   borderRadius: '6px',
                   cursor: 'pointer',
                   fontWeight: 'bold',
+                  transition: 'background-color 0.3s ease',
                 }}
+                className="btn-hover"
               >
                 Permitir
               </button>
@@ -292,6 +297,15 @@ export default function Home() {
         @keyframes blink {
           0%, 100% { opacity: 1; }
           50% { opacity: 0.5; }
+        }
+        .btn-hover:hover {
+          background-color: #6d28d9;
+        }
+        .btn-hover-red:hover {
+          background-color: #dc2626;
+        }
+        .btn-hover-gray:hover {
+          background-color: #555;
         }
       `}</style>
     </div>
