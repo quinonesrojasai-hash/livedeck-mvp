@@ -1,0 +1,12 @@
+.git
+.gitignore
+.next
+node_modules
+.env.local
+.env.*.local
+.vercel
+*.log
+.DS_Store
+Thumbs.db
+.eslintcache
+.turbo
